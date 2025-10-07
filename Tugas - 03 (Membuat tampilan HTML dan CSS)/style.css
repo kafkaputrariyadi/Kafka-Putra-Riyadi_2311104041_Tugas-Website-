@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+  background-color: #b400a5;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Banner Slider (Pure CSS) */
+.banner {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* Main */
+.main-content {
+  padding: 30px;
+}
+
+.produk-container {
+  display: flex;
+  gap: 20px;
+}
+
+.produk-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.produk-card {
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fff;
+}
+
+.produk-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.produk-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.produk-card p {
+  color: #b4005f;
+  font-weight: bold;
+}
+
+/* Rekomendasi */
+.rekomendasi {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  height: fit-content;
+}
+
+.rekomendasi h3 {
+  background-color: #b400a5;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rekomen-card {
+  text-align: center;
+}
+
+.rekomen-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.rekomen-card p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.rekomen-card .btn {
+  background-color: #b400a5 ;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+  color: #b4005f;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
